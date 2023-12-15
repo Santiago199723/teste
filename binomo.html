@@ -198,7 +198,10 @@
         }
 
         #message-container {
-            margin-top: 10px;
+            background-color: white; /* Fundo branco para a mensagem */
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
 
         #status-message {
@@ -217,9 +220,6 @@
         <div id="asset-name-container"><div id="asset-name"></div></div>
         <br>
         <br>
-        <div id="message-container">
-            <p id="status-message"></p>
-        </div>
     </div>
     <div id="indicator">
         <div class="border-animation"></div>
@@ -283,12 +283,12 @@
 
             if (buyPercentage >= 90) {
                 const entryTime = getEntryTime();
-                document.getElementById('status-message').innerText = `Faça CALL às ${entryTime} M1`;
+                document.getElementById('status-message').innerText = `FAÇA CALL ÀS ${entryTime} EM M1`;
                 var audioPlayer = document.getElementById('attentionAudio');
                 audioPlayer.play();
             } else if (sellPercentage >= 90) {
                 const entryTime = getEntryTime();
-                document.getElementById('status-message').innerText = `Faça PUT às ${entryTime} M1`;
+                document.getElementById('status-message').innerText = `FAÇA PUT ÀS ${entryTime} EM  M1`;
                 var audioPlayer = document.getElementById('attentionAudio');
                 audioPlayer.play();
             } else {
